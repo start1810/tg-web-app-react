@@ -6,7 +6,7 @@ const Form = () => {
     const [name, setName] = useState();
     const [birth, setBirth] = useState();
     const [gender, setGender] = useState();
-    const {tg} = useTelegram
+    const {tg} = useTelegram()
 
     useEffect(() => {
         tg.MainButton.setParams({
@@ -18,7 +18,7 @@ const Form = () => {
         if (!name || !birth) {
             tg.MainButton.hide();
         } else {
-            tg.MainButton.visible();
+            tg.MainButton.show();
         }
     }, [name, birth])
 
