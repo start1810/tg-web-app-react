@@ -66,6 +66,7 @@ const Form = () => {
             onChange={onChangeBirth}    
         />
         <select value={gender} onChange={onChangeGender} className={'select'}>
+            <option value={'выбрать'}>Выберите пол</option>
             <option value={'men'}>Мужчина</option>
             <option value={'women'}>Женщина</option>
         </select>
