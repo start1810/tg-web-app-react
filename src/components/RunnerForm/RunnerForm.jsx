@@ -34,7 +34,15 @@ const RunnerForm = () => {
 
     const onSendData = useCallback(() => {
         const data = {
-            trPerWeek: {mon, tue, wed, thu, fri, sat, sun},
+            trPerWeek: [
+                mon?mon:false,
+                tue?tue:false,
+                wed?wed:false,
+                thu?thu:false,
+                fri?fri:false,
+                sat?sat:false,
+                sun?sun:false
+            ],
             kmPerWeekAvg,
             records: {
                 oneKm: [oneKmMin, oneKmSec],
@@ -129,19 +137,19 @@ const RunnerForm = () => {
         setTue(e.currentTarget.checked)
     }
     const onChangeWed = (e) => {
-        setWed(e.target.value)
+        setWed(e.currentTarget.checked)
     }
     const onChangeThu = (e) => {
-        setThu(e.target.value)
+        setThu(e.currentTarget.checked)
     }
     const onChangeFri = (e) => {
-        setFri(e.target.value)
+        setFri(e.currentTarget.checked)
     }
     const onChangeSat = (e) => {
-        setSat(e.target.value)
+        setSat(e.currentTarget.checked)
     }
     const onChangeSun = (e) => {
-        setSun(e.target.value)
+        setSun(e.currentTarget.checked)
     }
 
     return (
