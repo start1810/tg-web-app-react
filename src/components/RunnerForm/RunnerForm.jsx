@@ -89,10 +89,10 @@ const RunnerForm = () => {
     }
 
     const onChangeThreeKmMin = (e) => {
-        setThreeKmMin(e.currentTarget.checked)
+        setThreeKmMin(e.target.value)
     }
     const onChangeThreeKmSec = (e) => {
-        setThreeKmSec(e.currentTarget.checked)
+        setThreeKmSec(e.target.value)
     }
 
     const onChangeFiveKmMin = (e) => {
@@ -123,10 +123,10 @@ const RunnerForm = () => {
     }
     
     const onChangeMon = (e) => {
-        setMon(e.target)
+        setMon(e.currentTarget.checked)
     }
     const onChangeTue = (e) => {
-        setTue(e.target)
+        setTue(e.currentTarget.checked)
     }
     const onChangeWed = (e) => {
         setWed(e.target.value)
