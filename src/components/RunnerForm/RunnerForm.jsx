@@ -45,11 +45,11 @@ const RunnerForm = () => {
             ],
             kmPerWeekAvg,
             records: {
-                oneKm: [oneKmMin, oneKmSec],
-                threeKm: [threeKmMin, threeKmSec],
-                fiveKm: [fiveKmMin, fiveKmSec],
-                tenKm: [tenKmH, tenKmMin, tenKmSec],
-                semiMarathon: [semiMarathonH, semiMarathonMin, semiMarathonSec],
+                oneKm: +oneKmMin * 60 + +oneKmSec,
+                threeKm: +threeKmMin * 60 + +threeKmSec,
+                fiveKm: +fiveKmMin * 60 + +fiveKmSec,
+                tenKm: +tenKmH * 60 * 60 + +tenKmMin * 60 + +tenKmSec,
+                semiMarathon: +semiMarathonH * 60 * 60 + +semiMarathonMin * 60 + +semiMarathonSec,
             }
             
         }
