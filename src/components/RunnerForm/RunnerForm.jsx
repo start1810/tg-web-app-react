@@ -11,6 +11,13 @@ const RunnerForm = () => {
     const [tenKm, setTenKm] = useState();
     const [semiMarathon, setSemiMarathon] = useState();
     const [marathon, setMarathon] = useState();
+    const [mon, setMon] = useState();
+    const [tue, setTue] = useState();
+    const [wed, setWed] = useState();
+    const [thu, setThu] = useState();
+    const [fri, setFri] = useState();
+    const [sat, setSat] = useState();
+    const [sun, setSun] = useState();
 
 
     const {tg} = useTelegram();
@@ -24,10 +31,17 @@ const RunnerForm = () => {
             fiveKm,
             tenKm,
             semiMarathon,
-            marathon
+            marathon,
+            mon,
+            tue,
+            wed,
+            thu,
+            fri,
+            sat,
+            sun
         }
         tg.sendData(JSON.stringify(data))
-    }, [trPerWeek, kmPerWeekAvg, oneKm, threeKm, fiveKm, tenKm, semiMarathon, marathon]);
+    }, [trPerWeek, kmPerWeekAvg, oneKm, threeKm, fiveKm, tenKm, semiMarathon, marathon, mon, tue, wed, thu, fri, sat, sun]);
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData);
@@ -77,6 +91,27 @@ const RunnerForm = () => {
     const onChangeMarathon = (e) => {
         setMarathon(e.target.value)
     }
+    const onChangeMon = (e) => {
+        setMon(e.target.value)
+    }
+    const onChangeTue = (e) => {
+        setTue(e.target.value)
+    }
+    const onChangeWed = (e) => {
+        setWed(e.target.value)
+    }
+    const onChangeThu = (e) => {
+        setThu(e.target.value)
+    }
+    const onChangeFri = (e) => {
+        setFri(e.target.value)
+    }
+    const onChangeSat = (e) => {
+        setSat(e.target.value)
+    }
+    const onChangeSun = (e) => {
+        setSun(e.target.value)
+    }
 
     return (
         <div className={"form"}>
@@ -113,49 +148,63 @@ const RunnerForm = () => {
                             type="checkbox" 
                             id = "mon" 
                             value={mon} 
-                            name="trPerWeek"/>
+                            name="trPerWeek"
+                            onChange={onChangeMon}
+                        />    
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "tue" 
                             value={tue} 
-                            name="trPerWeek"/> 
+                            name="trPerWeek"
+                            onChange={onChangeTue}
+                            /> 
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "wed" 
                             value={wed} 
-                            name="trPerWeek"/>
+                            name="trPerWeek"
+                            onChange={onChangeWed}
+                            />
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "thu" 
                             value={thu} 
-                            name="trPerWeek"/>
+                            name="trPerWeek"
+                            onChange={onChangeThu}
+                            />
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "fri" 
                             value={fri} 
-                            name="trPerWeek"/>  
+                            name="trPerWeek"
+                            onChange={onChangeFri}
+                            />  
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "sat" 
                             value={sat} 
-                            name="trPerWeek"/> 
+                            name="trPerWeek"
+                            onChange={onChangeSat}
+                            /> 
                         </td>
                         <td>
                         <input 
                             type="checkbox" 
                             id = "sun" 
                             value={sun} 
-                            name="trPerWeek"/>
+                            name="trPerWeek"
+                            onChange={onChangeSun}
+                            />
                         </td>
                     </tr>
                 </table>
