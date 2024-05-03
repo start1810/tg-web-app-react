@@ -226,7 +226,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'1 км'}
-                step={"2"}
+                step={1}
                 value={oneKm}
                 onChange={onChangeOneKm}
             />
@@ -234,7 +234,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'3 км'}
-                step={"2"}
+                step={1}
                 value={threeKm}
                 onChange={onChangeThreeKm}
             />
@@ -242,7 +242,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'5 км'}
-                step={"2"}
+                step={1}
                 value={fiveKm}
                 onChange={onChangeFiveKm}
             />
@@ -250,7 +250,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'10 км'}
-                step={"2"}
+                step={1}
                 value={tenKm}
                 onChange={onChangeTenKm}
             />
@@ -258,7 +258,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'Полумарафон'}
-                step={"2"}
+                step={1}
                 value={semiMarathon}
                 onChange={onChangeSemiMarathon}
             />
@@ -266,7 +266,7 @@ const RunnerForm = () => {
                 className={'input'}
                 type="time" 
                 //placeholder={'Марафон'}
-                step={"2"}
+                step={1}
                 value={marathon}
                 onChange={onChangeMarathon}
             />
