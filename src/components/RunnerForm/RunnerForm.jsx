@@ -3,14 +3,24 @@ import "./RunnerForm.css";
 import { useTelegram } from "../../hooks/useTelegram";
 
 const RunnerForm = () => {
-    const [trPerWeek, setTrPerWeek] = useState();
     const [kmPerWeekAvg, setKmPerWeekAvg] = useState();
-    const [oneKm, setOneKm] = useState();
-    const [threeKm, setThreeKm] = useState();
-    const [fiveKm, setFiveKm] = useState();
-    const [tenKm, setTenKm] = useState();
-    const [semiMarathon, setSemiMarathon] = useState();
-    const [marathon, setMarathon] = useState();
+    const [oneKmMin, setOneKmMin] = useState();
+    const [oneKmSec, setOneKmSec] = useState();
+
+    const [threeKmMin, setThreeKmMin] = useState();
+    const [threeKmSec, setThreeKmSec] = useState();
+
+    const [fiveKmMin, setFiveKmMin] = useState();
+    const [fiveKmSec, setFiveKmSec] = useState();
+
+    const [tenKmMin, setTenKmMin] = useState();
+    const [tenKmSec, setTenKmSec] = useState();
+    const [tenKmH, setTenKmH] = useState();
+    
+    const [semiMarathonMin, setSemiMarathonMin] = useState();
+    const [semiMarathonSec, setSemiMarathonSec] = useState();
+    const [semiMarathonH, setSemiMarathonH] = useState();
+
     const [mon, setMon] = useState();
     const [tue, setTue] = useState();
     const [wed, setWed] = useState();
@@ -24,21 +34,17 @@ const RunnerForm = () => {
 
     const onSendData = useCallback(() => {
         const data = {
-            trPerWeek,
+            trPerWeek: {mon, tue, wed, thu, fri, sat, sun},
             kmPerWeekAvg,
-            oneKm,
-            threeKm,
-            fiveKm,
-            tenKm,
-            semiMarathon,
-            marathon,
-            mon,
-            tue,
-            wed,
-            thu,
-            fri,
-            sat,
-            sun
+            records: {
+                oneKm,
+                threeKm,
+                fiveKm,
+                tenKm,
+                semiMarathon,
+                marathon,
+            }
+            
         }
         tg.sendData(JSON.stringify(data))
     }, [trPerWeek, kmPerWeekAvg, oneKm, threeKm, fiveKm, tenKm, semiMarathon, marathon, mon, tue, wed, thu, fri, sat, sun]);
@@ -73,24 +79,47 @@ const RunnerForm = () => {
     const onChangeKmPerWeekAvg = (e) => {
         setKmPerWeekAvg(e.target.value)
     }
-    const onChangeOneKm = (e) => {
-        setOneKm(e.target.value)
+    const onChangeOneKmMin = (e) => {
+        setOneKmMin(e.target.value)
     }
-    const onChangeThreeKm = (e) => {
-        setThreeKm(e.target.value)
+    const onChangeOneKmSec = (e) => {
+        setOneKmSec(e.target.value)
     }
-    const onChangeFiveKm = (e) => {
-        setFiveKm(e.target.value)
+
+    const onChangeThreeKmMin = (e) => {
+        setThreeKmMin(e.target.value)
     }
-    const onChangeTenKm = (e) => {
-        setTenKm(e.target.value)
+    const onChangeThreeKmSec = (e) => {
+        setThreeKmSec(e.target.value)
     }
-    const onChangeSemiMarathon = (e) => {
-        setSemiMarathon(e.target.value)
+
+    const onChangeFiveKmMin = (e) => {
+        setFiveKmMin(e.target.value)
     }
-    const onChangeMarathon = (e) => {
-        setMarathon(e.target.value)
+    const onChangeFiveKmSec = (e) => {
+        setFiveKmSec(e.target.value)
     }
+
+    const onChangeTenKmH = (e) => {
+        setTenKmH(e.target.value)
+    }
+    const onChangeTenKmMin = (e) => {
+        setTenKmMin(e.target.value)
+    }
+    const onChangeTenKmSec = (e) => {
+        setTenKmSec(e.target.value)
+    }
+
+    const onChangeSemiMarathonH = (e) => {
+        setSemiMarathonH(e.target.value)
+    }
+    const onChangeSemiMarathonMin = (e) => {
+        setSemiMarathonMin(e.target.value)
+    }
+    const onChangeSemiMarathonSec = (e) => {
+        setSemiMarathonSec(e.target.value)
+    }
+    
     const onChangeMon = (e) => {
         setMon(e.target.value)
     }
@@ -222,54 +251,129 @@ const RunnerForm = () => {
 
             <div>
             <h4>Введите свои лучшие результаты на этих дистанциях за последние 6 недель</h4>
+            <div>
+            <h5>1 километр</h5>
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'1 км'}
-                step={1}
-                value={oneKm}
-                onChange={onChangeOneKm}
+                type="number"
+                max={"60"}
+                min={"0"} 
+                placeholder={'ММ'}
+                value={oneKmMin}
+                onChange={onChangeOneKmMin}
             />
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'3 км'}
-                step={1}
-                value={threeKm}
-                onChange={onChangeThreeKm}
+                type="number"
+                max={"60"}
+                min={"0"}
+                placeholder={'СС'}
+                value={oneKmSec}
+                onChange={onChangeOneKmSec}
+            />
+            </div>
+            <div>
+            <h5>3 километра</h5>
+            <input 
+                className={'input'}
+                type="number"
+                max={"60"}
+                min={"0"} 
+                placeholder={'ММ'}
+                value={threeKmMin}
+                onChange={onChangeThreeKmMin}
             />
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'5 км'}
-                step={1}
-                value={fiveKm}
-                onChange={onChangeFiveKm}
+                type="number"
+                max={"60"}
+                min={"0"}
+                placeholder={'СС'}
+                value={threeKmSec}
+                onChange={onChangeThreeKmSec}
+            />
+            </div>
+            <div>
+            <h5>5 километров</h5>
+            <input 
+                className={'input'}
+                type="number"
+                max={"60"}
+                min={"0"} 
+                placeholder={'ММ'}
+                value={fiveKmMin}
+                onChange={onChangeFiveKmMin}
             />
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'10 км'}
-                step={1}
-                value={tenKm}
-                onChange={onChangeTenKm}
+                type="number"
+                max={"60"}
+                min={"0"}
+                placeholder={'СС'}
+                value={fiveKmSec}
+                onChange={onChangeFiveKmSec}
+            />
+            </div>
+            <div>
+            <h5>10 километров</h5>
+            <input 
+                className={'input'}
+                type="number"
+                max={"2"}
+                min={"0"} 
+                placeholder={'ЧЧ'}
+                value={tenKmH}
+                onChange={onChangeTenKmH}
             />
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'Полумарафон'}
-                step={1}
-                value={semiMarathon}
-                onChange={onChangeSemiMarathon}
+                type="number"
+                max={"60"}
+                min={"0"} 
+                placeholder={'ММ'}
+                value={tenKmMin}
+                onChange={onChangeTenKmMin}
             />
             <input 
                 className={'input'}
-                type="time" 
-                //placeholder={'Марафон'}
-                step={1}
-                value={marathon}
-                onChange={onChangeMarathon}
+                type="number"
+                max={"60"}
+                min={"0"}
+                placeholder={'СС'}
+                value={tenKmSec}
+                onChange={onChangeTenKmSec}
             />
+            </div>
+            <div>
+            <h5>Полумарафон</h5>
+            <input 
+                className={'input'}
+                type="number"
+                max={"4"}
+                min={"0"} 
+                placeholder={'ЧЧ'}
+                value={semiMarathonH}
+                onChange={onChangeSemiMarathonH}
+            />
+            <input 
+                className={'input'}
+                type="number"
+                max={"60"}
+                min={"0"} 
+                placeholder={'ММ'}
+                value={semiMarathonMin}
+                onChange={onChangeSemiMarathonMin}
+            />
+            <input 
+                className={'input'}
+                type="number"
+                max={"60"}
+                min={"0"}
+                placeholder={'СС'}
+                value={semiMarathonSec}
+                onChange={onChangeSemiMarathonSec}
+            />
+            </div>
             </div>
         </div>
      );
