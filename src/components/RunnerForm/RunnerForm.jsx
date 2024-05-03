@@ -123,10 +123,10 @@ const RunnerForm = () => {
     }
     
     const onChangeMon = (e) => {
-        setMon(e.target.value)
+        setMon(e)
     }
     const onChangeTue = (e) => {
-        setTue(e.target.value)
+        setTue(e)
     }
     const onChangeWed = (e) => {
         setWed(e.target.value)
