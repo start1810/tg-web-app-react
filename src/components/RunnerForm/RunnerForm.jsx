@@ -37,17 +37,19 @@ const RunnerForm = () => {
             trPerWeek: {mon, tue, wed, thu, fri, sat, sun},
             kmPerWeekAvg,
             records: {
-                oneKm,
-                threeKm,
-                fiveKm,
-                tenKm,
-                semiMarathon,
-                marathon,
+                oneKm: [oneKmMin, oneKmSec],
+                threeKm: [threeKmMin, threeKmSec],
+                fiveKm: [fiveKmMin, fiveKmSec],
+                tenKm: [tenKmH, tenKmMin, tenKmSec],
+                semiMarathon: [semiMarathonH, semiMarathonMin, semiMarathonSec],
             }
             
         }
         tg.sendData(JSON.stringify(data))
-    }, [trPerWeek, kmPerWeekAvg, oneKm, threeKm, fiveKm, tenKm, semiMarathon, marathon, mon, tue, wed, thu, fri, sat, sun]);
+    }, [kmPerWeekAvg, oneKmMin, oneKmSec, threeKmMin, threeKmSec
+        , fiveKmMin, fiveKmSec, tenKmH, tenKmMin, tenKmSec,
+         semiMarathonH, semiMarathonMin, semiMarathonSec,
+          mon, tue, wed, thu, fri, sat, sun]);
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData);
