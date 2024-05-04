@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './ProductList.css';
-import ProductItem from "../ProductItem/ProductItem"
-import {useTelegram} from "../../hooks/useTelegram"
+import ProductItem from "../../components/ProductItem/ProductItem";
+import {useTelegram} from "../../hooks/useTelegram";
 
 const products = [
     {id:1, title: 'T-shirt', price: 400, description: 'Run clothes'},
