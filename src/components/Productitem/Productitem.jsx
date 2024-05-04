@@ -1,8 +1,8 @@
 import React from "react";
-import {Button} from "../Button/Button";
+//import {Button} from "../Button/Button";
 import "./Productitem.css";
 
-const ProfuctItem = ({product, className, onAdd}) => {
+const ProductItem = ({product, className, onAdd}) => {
     const onAddHandler = () =>{
         onAdd(product);
     }
@@ -21,4 +21,4 @@ const ProfuctItem = ({product, className, onAdd}) => {
     );
 };
 
-export default ProfuctItem;
+export default ProductItem;
