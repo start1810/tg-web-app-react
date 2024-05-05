@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ProgramElem from "../ProgramElem/ProgramElem";
+import { useTelegram } from "../../hooks/useTelegram";
 
 const WorkoutPrograms = [
     {id: 1, title: 'Общая', type: 'all', description: 'Программа, направленная на развитие всех качеств'},
@@ -10,6 +11,7 @@ const WorkoutPrograms = [
 
 const ProgramList = () => {
     const [chooseProgram, setChooseProgram] = useState();
+    const {tg} = useTelegram();
 
     const onAdd = (program) => {
         setChooseProgram(program.type);
