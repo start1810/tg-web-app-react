@@ -14,7 +14,7 @@ const ProgramList = () => {
     const {tg} = useTelegram();
 
     const onAdd = (program) => {
-        setChooseProgram(program.type);
+        setChooseProgram(program);
     }
 
     if (!chooseProgram) {
