@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import ProgramElem from "../ProgramElem/ProgramElem";
 import { useTelegram } from "../../hooks/useTelegram";
 
