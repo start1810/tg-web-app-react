@@ -14,6 +14,15 @@ const ProgramList = () => {
     const onAdd = (program) => {
         setChooseProgram(program.type);
     }
+
+    if (!chooseProgram) {
+        tg.MainButton.hide();
+    } else {
+        tg.MainButton.show();
+        tg.MainButton.setParams({
+            text: `Выбрать: план -  ${chooseProgram.title}`
+        })
+    }
     return (
        <div>
             {WorkoutPrograms.map((item) => 
