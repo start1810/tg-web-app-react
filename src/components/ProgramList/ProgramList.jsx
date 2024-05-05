@@ -13,6 +13,18 @@ const ProgramList = () => {
     const [chooseProgram, setChooseProgram] = useState();
     const {tg} = useTelegram();
 
+    const onSendData = useCallback(() => {
+        const data = {chooseProgram}
+        tg.sendData(JSON.stringify(data))
+    }, [chooseProgram]);
+
+    useEffect(() => {
+        tg.onEvent('mainButtonClicked', onSendData);
+        return () => {
+            tg.offEvent('mainButtonClicked', onSendData);
+        }
+    }, [onSendData]);
+    
     const onAdd = (program) => {
         setChooseProgram(program);
     }

@@ -264,7 +264,7 @@ const RunnerForm = () => {
             <div>
             <h5>1 километр</h5>
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"} 
@@ -273,7 +273,7 @@ const RunnerForm = () => {
                 onChange={onChangeOneKmMin}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"}
@@ -285,7 +285,7 @@ const RunnerForm = () => {
             <div>
             <h5>3 километра</h5>
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"} 
@@ -294,7 +294,7 @@ const RunnerForm = () => {
                 onChange={onChangeThreeKmMin}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"}
@@ -306,7 +306,7 @@ const RunnerForm = () => {
             <div>
             <h5>5 километров</h5>
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"} 
@@ -315,7 +315,7 @@ const RunnerForm = () => {
                 onChange={onChangeFiveKmMin}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"}
@@ -327,7 +327,7 @@ const RunnerForm = () => {
             <div>
             <h5>10 километров</h5>
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"2"}
                 min={"0"} 
@@ -336,7 +336,7 @@ const RunnerForm = () => {
                 onChange={onChangeTenKmH}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"} 
@@ -345,7 +345,7 @@ const RunnerForm = () => {
                 onChange={onChangeTenKmMin}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"}
@@ -357,7 +357,7 @@ const RunnerForm = () => {
             <div>
             <h5>Полумарафон</h5>
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"4"}
                 min={"0"} 
@@ -366,7 +366,7 @@ const RunnerForm = () => {
                 onChange={onChangeSemiMarathonH}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"} 
@@ -375,7 +375,7 @@ const RunnerForm = () => {
                 onChange={onChangeSemiMarathonMin}
             />
             <input 
-                className={'input'}
+                className={'input time'}
                 type="number"
                 max={"60"}
                 min={"0"}
