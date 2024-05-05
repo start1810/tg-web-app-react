@@ -3,31 +3,31 @@ import "./RunnerForm.css";
 import { useTelegram } from "../../hooks/useTelegram";
 
 const RunnerForm = () => {
-    const [kmPerWeekAvg, setKmPerWeekAvg] = useState();
-    const [oneKmMin, setOneKmMin] = useState();
-    const [oneKmSec, setOneKmSec] = useState();
+    const [kmPerWeekAvg, setKmPerWeekAvg] = useState(0);
+    const [oneKmMin, setOneKmMin] = useState(0);
+    const [oneKmSec, setOneKmSec] = useState(0);
 
-    const [threeKmMin, setThreeKmMin] = useState();
-    const [threeKmSec, setThreeKmSec] = useState();
+    const [threeKmMin, setThreeKmMin] = useState(0);
+    const [threeKmSec, setThreeKmSec] = useState(0);
 
-    const [fiveKmMin, setFiveKmMin] = useState();
-    const [fiveKmSec, setFiveKmSec] = useState();
+    const [fiveKmMin, setFiveKmMin] = useState(0);
+    const [fiveKmSec, setFiveKmSec] = useState(0);
 
-    const [tenKmMin, setTenKmMin] = useState();
-    const [tenKmSec, setTenKmSec] = useState();
-    const [tenKmH, setTenKmH] = useState();
+    const [tenKmMin, setTenKmMin] = useState(0);
+    const [tenKmSec, setTenKmSec] = useState(0);
+    const [tenKmH, setTenKmH] = useState(0);
     
-    const [semiMarathonMin, setSemiMarathonMin] = useState();
-    const [semiMarathonSec, setSemiMarathonSec] = useState();
-    const [semiMarathonH, setSemiMarathonH] = useState();
+    const [semiMarathonMin, setSemiMarathonMin] = useState(0);
+    const [semiMarathonSec, setSemiMarathonSec] = useState(0);
+    const [semiMarathonH, setSemiMarathonH] = useState(0);
 
-    const [mon, setMon] = useState();
-    const [tue, setTue] = useState();
-    const [wed, setWed] = useState();
-    const [thu, setThu] = useState();
-    const [fri, setFri] = useState();
-    const [sat, setSat] = useState();
-    const [sun, setSun] = useState();
+    const [mon, setMon] = useState(false);
+    const [tue, setTue] = useState(false);
+    const [wed, setWed] = useState(false);
+    const [thu, setThu] = useState(false);
+    const [fri, setFri] = useState(false);
+    const [sat, setSat] = useState(false);
+    const [sun, setSun] = useState(false);
 
 
     const {tg} = useTelegram();
