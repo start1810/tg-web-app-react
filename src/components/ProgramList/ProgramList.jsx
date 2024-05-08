@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from "react";
 import ProgramElem from "../ProgramElem/ProgramElem";
 import { useTelegram } from "../../hooks/useTelegram";
+import './ProgramList.css';
 
 const WorkoutPrograms = [
     {id: 1, title: 'Общая', type: 'all', description: 'Программа, направленная на развитие всех качеств'},
@@ -40,11 +41,14 @@ const ProgramList = () => {
     return (
        <div>
             {WorkoutPrograms.map((item) => 
-                <ProgramElem
-                    program={item}
-                    onAdd={onAdd}
-                    className={'item'}
-                />)
+                <div>
+                    <ProgramElem
+                        program={item}
+                        onAdd={onAdd}
+                        className={`item`}
+                    />
+                </div>
+                )
             }
        </div> 
     )

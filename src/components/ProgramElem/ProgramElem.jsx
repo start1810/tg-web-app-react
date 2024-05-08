@@ -9,10 +9,9 @@ const ProgramElem = ({program, className, onAdd}) => {
 
     return (
         <div>
-            <div>{program.title}</div>
-            <div>{program.description}</div>
-            <Button className={"add-btn"} onClick={onAddHandler}>
-                Выбрать план
+            <Button className={`add-btn item image${program.id} `} onClick={onAddHandler}>
+                <div>{program.title}</div>
+                <div>{program.description}</div>
             </Button>
         </div>
     )

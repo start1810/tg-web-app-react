@@ -1,7 +1,9 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./RunnerForm.css";
 import { useTelegram } from "../../hooks/useTelegram";
-
+const validate = () => {
+    
+}
 const RunnerForm = () => {
     const [kmPerWeekAvg, setKmPerWeekAvg] = useState();
     const [oneKmMin, setOneKmMin] = useState();
@@ -21,13 +23,13 @@ const RunnerForm = () => {
     const [semiMarathonSec, setSemiMarathonSec] = useState();
     const [semiMarathonH, setSemiMarathonH] = useState();
 
-    const [mon, setMon] = useState(false);
-    const [tue, setTue] = useState(false);
-    const [wed, setWed] = useState(false);
-    const [thu, setThu] = useState(false);
-    const [fri, setFri] = useState(false);
-    const [sat, setSat] = useState(false);
-    const [sun, setSun] = useState(false);
+    const [mon, setMon] = useState();
+    const [tue, setTue] = useState();
+    const [wed, setWed] = useState();
+    const [thu, setThu] = useState();
+    const [fri, setFri] = useState();
+    const [sat, setSat] = useState();
+    const [sun, setSun] = useState();
 
 
     const {tg} = useTelegram();
