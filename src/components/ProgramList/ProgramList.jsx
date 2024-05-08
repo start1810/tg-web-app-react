@@ -45,7 +45,7 @@ const ProgramList = () => {
                     <ProgramElem
                         program={item}
                         onAdd={onAdd}
-                        className={`item`}
+                        className={item.id !== chooseProgram?.id ? 'imagegrey' + item.id : 'image' + item.id}
                     />
                 </div>
                 )

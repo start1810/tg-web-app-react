@@ -1,6 +1,14 @@
+
+
 .item {
+    margin-left: 5%;
+    margin-right: 5%;
     width: 90%;
     height: 50vw;
+}
+
+.grey {
+    background-color: grey;
 }
 
 .image1 {
@@ -23,6 +31,30 @@
 
 .image4 {
     background: url("../../img/4.JPG");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagegrey1 {
+    background: url("../../img/grey1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagegrey2 {
+    background: url("../../img/grey2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagegrey3 {
+    background: url("../../img/grey3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.imagegrey4 {
+    background: url("../../img/grey4.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
