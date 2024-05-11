@@ -1,27 +1,27 @@
 import React, { useCallback, useEffect, useState } from "react";
 import "./RunnerForm.css";
 import { useTelegram } from "../../hooks/useTelegram";
-const validate = () => {
-    
+const isEmpty = (data) => {
+    return data ? data : 0;
 }
 const RunnerForm = () => {
-    const [kmPerWeekAvg, setKmPerWeekAvg] = useState();
-    const [oneKmMin, setOneKmMin] = useState();
-    const [oneKmSec, setOneKmSec] = useState();
+    const [kmPerWeekAvg, setKmPerWeekAvg] = useState('');
+    const [oneKmMin, setOneKmMin] = useState('');
+    const [oneKmSec, setOneKmSec] = useState('');
 
-    const [threeKmMin, setThreeKmMin] = useState();
-    const [threeKmSec, setThreeKmSec] = useState();
+    const [threeKmMin, setThreeKmMin] = useState('');
+    const [threeKmSec, setThreeKmSec] = useState('');
 
-    const [fiveKmMin, setFiveKmMin] = useState();
-    const [fiveKmSec, setFiveKmSec] = useState();
+    const [fiveKmMin, setFiveKmMin] = useState('');
+    const [fiveKmSec, setFiveKmSec] = useState('');
 
-    const [tenKmMin, setTenKmMin] = useState();
-    const [tenKmSec, setTenKmSec] = useState();
-    const [tenKmH, setTenKmH] = useState();
+    const [tenKmMin, setTenKmMin] = useState('');
+    const [tenKmSec, setTenKmSec] = useState('');
+    const [tenKmH, setTenKmH] = useState('');
     
-    const [semiMarathonMin, setSemiMarathonMin] = useState();
-    const [semiMarathonSec, setSemiMarathonSec] = useState();
-    const [semiMarathonH, setSemiMarathonH] = useState();
+    const [semiMarathonMin, setSemiMarathonMin] = useState('');
+    const [semiMarathonSec, setSemiMarathonSec] = useState('');
+    const [semiMarathonH, setSemiMarathonH] = useState('');
 
     const [mon, setMon] = useState();
     const [tue, setTue] = useState();
@@ -47,11 +47,11 @@ const RunnerForm = () => {
             ],
             kmPerWeekAvg,
             records: {
-                oneKm: +oneKmMin * 60 + +oneKmSec,
-                threeKm: +threeKmMin * 60 + +threeKmSec,
-                fiveKm: +fiveKmMin * 60 + +fiveKmSec,
-                tenKm: +tenKmH * 60 * 60 + +tenKmMin * 60 + +tenKmSec,
-                semiMarathon: +semiMarathonH * 60 * 60 + +semiMarathonMin * 60 + +semiMarathonSec,
+                oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
+                threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
+                fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),
+                tenKm: +isEmpty(tenKmH) * 60 * 60 + +isEmpty(tenKmMin) * 60 + +isEmpty(tenKmSec),
+                semiMarathon: +isEmpty(semiMarathonH) * 60 * 60 + +isEmpty(semiMarathonMin) * 60 + +isEmpty(semiMarathonSec),
             }
             
         }
