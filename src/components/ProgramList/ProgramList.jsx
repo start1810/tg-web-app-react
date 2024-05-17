@@ -12,12 +12,15 @@ const WorkoutPrograms = [
 
 const ProgramList = () => {
     const [chooseProgram, setChooseProgram] = useState();
+    const [startDate, setStartDate] = useState();
+    const [endDate, setEndDate] = useState();
+
     const {tg} = useTelegram();
 
     const onSendData = useCallback(() => {
-        const data = {chooseProgram}
+        const data = {chooseProgram, startDate, endDate}
         tg.sendData(JSON.stringify(data))
-    }, [chooseProgram]);
+    }, [chooseProgram, startDate, endDate]);
 
     useEffect(() => {
         tg.onEvent('mainButtonClicked', onSendData);
@@ -30,6 +33,14 @@ const ProgramList = () => {
         setChooseProgram(program);
     }
 
+    const onChangeStartDate = (e) => {
+        setStartDate(e.elem.value);
+    }
+
+    const onChangeEndDate = (e) => {
+        setEndDate(e.elem.value);
+    }
+
     if (!chooseProgram) {
         tg.MainButton.hide();
     } else {
@@ -40,6 +51,26 @@ const ProgramList = () => {
     }
     return (
        <div>
+            <div>
+            <h4>Выберите дату начала тренировок</h4>
+                <input 
+                    className={'input'}
+                    type="date" 
+                    //placeholder={'Километраж'}
+                    value={startDate}
+                    onChange={onChangeStartDate}
+                />
+            </div>
+            <div>
+            <h4>Выберите дату конца тренировок</h4>
+                <input 
+                    className={'input'}
+                    type="date" 
+                    //placeholder={'Километраж'}
+                    value={endDate}
+                    onChange={onChangeEndDate}
+                />   
+            </div>
             {WorkoutPrograms.map((item) => 
                 <div>
                     <ProgramElem

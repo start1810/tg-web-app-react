@@ -7,6 +7,7 @@ import ProductList from './components/ProductList/ProductList';
 import Form from './components/Form/Form';
 import RunnerForm from './components/RunnerForm/RunnerForm';
 import ProgramList from './components/ProgramList/ProgramList';
+import StartPage from './components/StartPage/StartPage';
 
 function App() {
   const {tg, onToggleButton} = useTelegram();
@@ -18,7 +19,7 @@ function App() {
     <div className="App">
       <Header />
       <Routes>
-        <Route index element={<ProductList />}/>
+        <Route index element={<StartPage />}/>
         <Route path={'form'} element={<Form />}/>
         <Route path={'runnerform'} element={<RunnerForm />}/>
         <Route path={'runnerprogram'} element={<ProgramList />}/>
