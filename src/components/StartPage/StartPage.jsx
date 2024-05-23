@@ -6,12 +6,12 @@ const StartPage = () => {
     return (
         <div>
             <div>
-                <Link to="/runnerform">
-                    <Button>Редактировать профиль</Button>
+                <Link to="/tempocalculatorform">
+                    <Button>Калькулятор темпов</Button>
                 </Link>
             </div>
             <div>
-                <Link to="/runnerprogramm">
+                <Link to="/runnerprogram">
                     <Button>Редактировать тренировочный план</Button>
                 </Link>
             </div>
