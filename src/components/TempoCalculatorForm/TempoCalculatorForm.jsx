@@ -8,6 +8,8 @@ const isEmpty = (data) => {
     return data ? data : 0;
 }
 const TempoCalculatorForm = () => {
+    const [age, setAge] = useState('');
+
     const [oneKmMin, setOneKmMin] = useState('');
     const [oneKmSec, setOneKmSec] = useState('');
 
@@ -27,49 +29,9 @@ const TempoCalculatorForm = () => {
 
     const {tg} = useTelegram();
 
-    const onSendData = useCallback(() => {
-        const data = {
-            
-            records: {
-                oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
-                threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
-                fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),
-                tenKm: +isEmpty(tenKmH) * 60 * 60 + +isEmpty(tenKmMin) * 60 + +isEmpty(tenKmSec),
-                semiMarathon: +isEmpty(semiMarathonH) * 60 * 60 + +isEmpty(semiMarathonMin) * 60 + +isEmpty(semiMarathonSec),
-            }
-            
-        }
-        tg.sendData(JSON.stringify(data))
-    }, [
-        oneKmMin, oneKmSec, threeKmMin, threeKmSec,
-        fiveKmMin, fiveKmSec, tenKmH, tenKmMin, tenKmSec,
-        semiMarathonH, semiMarathonMin, semiMarathonSec,
-        ]);
-
-    useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData);
-        return () => {
-            tg.offEvent('mainButtonClicked', onSendData);
-        }
-    }, [onSendData]);
-
-    useEffect(() => {
-        tg.MainButton.setParams({
-            text: 'Отправить данные'
-        })
-    }, []);
-
-    /*
-    useEffect(() => {
-        if (!kmPerWeekAvg) {
-            tg.MainButton.hide();
-        } else {
-            tg.MainButton.show();
-        }
-    }, [kmPerWeekAvg])
-    */
-
-    // tg.MainButton.show();
+    const onChangeAge = (e) => {
+        setAge(e.target.value);
+    }
 
     const onChangeOneKmMin = (e) => {
         setOneKmMin(e.target.value)
@@ -115,7 +77,14 @@ const TempoCalculatorForm = () => {
 
     return (
         <div className={"form"}>
-            
+            <h4>Ваш возраст</h4>
+            <input 
+                className={'input'}
+                type="text"
+                placeholder={'сколько Вам лет'}
+                value={age}
+                onChange={onChangeAge}
+            />
             <div>
             <h4>Введите свои лучшие результаты на этих дистанциях за последние 6 недель</h4>
             <div>
@@ -244,6 +213,7 @@ const TempoCalculatorForm = () => {
             </div>
             <div>
                 <Link to="/tempocalculatorresult" state={{
+                    age: age,
                     oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
                     threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
                     fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),

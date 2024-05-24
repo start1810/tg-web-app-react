@@ -1,0 +1,19 @@
+td {
+    text-align: center;
+    
+}
+.generalparameter {
+    text-align: center;
+    margin-bottom: 5%;
+}
+.tempodata {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+}
+.table {
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5%;
+}
