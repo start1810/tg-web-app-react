@@ -39,7 +39,7 @@ const TempoCalculatorResult = () => {
 
     return (
         <div className={"app"}>
-            <div>
+            <div className={"runlevels"}>
                 <div className={"generalparameter"}>
                     <h1>{generalLevel}</h1>
                     run level
