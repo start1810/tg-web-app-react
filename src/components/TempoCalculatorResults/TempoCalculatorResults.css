@@ -1,4 +1,6 @@
-
+.runlevels {
+    background: linear-gradient(blue, var(--tg-theme-bg-color));
+}
 
 td {
     text-align: center;
