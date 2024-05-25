@@ -7,6 +7,7 @@ import secToMin from "../../scripts/tempoCalculator/secToMin.js";
 import Button from "../Button/Button.jsx";
 import "./TempoCalculatorResults.css";
 import countGeneralParameter from "../../scripts/tempoCalculator/countGeneralParameter.js";
+import countTempos from "../../scripts/tempoCalculator/countTempos.js";
 
 const recomendedTimes = {
     easy: 90 * 60,
@@ -31,24 +32,21 @@ const TempoCalculatorResult = () => {
         )
     }
     
+    
+
+    const thresholdRun = countTempos(records, 'threshold')
+
+    const intervalRun = countTempos(records, 'interval')
+
+    const repeatRun = countTempos(records, 'repeat')
     const age = records.age;
-    const nearestTimeEasy = findNearTime(records, recomendedTimes.easy);
-    const levelEasy = getLevel(nearestTimeEasy);
-    const tempoEasy = getTempo(levelEasy, 'easy');
+    const generalLevel = countGeneralParameter(thresholdRun.level, intervalRun.level, repeatRun.level, age)
+    const maxLevel = Math.max(thresholdRun.level, intervalRun.level, repeatRun.level)
+    const minLevel = Math.min(thresholdRun.level, intervalRun.level, repeatRun.level)
+    const easyTempoMax = getTempo(maxLevel, 'easy');
+    const easyTempoMin = getTempo(minLevel, 'easy');
 
-    const nearestTimeThreshold = findNearTime(records, recomendedTimes.threshold);
-    const levelThreshold = getLevel(nearestTimeThreshold);
-    const tempoThreshold = getTempo(levelThreshold, 'threshold')
-
-    const nearestTimeInterval = findNearTime(records, recomendedTimes.interval);
-    const levelInterval = getLevel(nearestTimeInterval);
-    const tempoInterval = getTempo(levelInterval, 'interval')
-
-    const nearestTimeRepeat = findNearTime(records, recomendedTimes.repeat);
-    const levelRepeat = getLevel(nearestTimeRepeat);
-    const tempoRepeat = getTempo(levelRepeat, 'repeat')
-
-    const generalParameter = countGeneralParameter(levelThreshold, levelInterval, levelRepeat, age)
+   
     //console.log(nearestTimeEasy)
     //console.log(nearestTimeThreshold)
     //console.log(nearestTimeInterval)
@@ -57,7 +55,8 @@ const TempoCalculatorResult = () => {
         <div>
             <div>
                 <div className={"generalparameter"}>
-                    <h1>{generalParameter}</h1>
+                    <h1>{generalLevel}</h1>
+                    run level
                 </div>
                 <table className="table">
                     <tr>
@@ -67,21 +66,21 @@ const TempoCalculatorResult = () => {
                         <th>ВЗР</th>
                     </tr>
                     <tr>
-                        <td>{levelThreshold}</td>
-                        <td>{levelInterval}</td>
-                        <td>{levelRepeat}</td>
+                        <td>{thresholdRun.level}</td>
+                        <td>{intervalRun.level}</td>
+                        <td>{repeatRun.level}</td>
                         <td>{age}</td>
                     </tr>
                 </table>
             </div>
             <div className={"tempodata"}>
-                Легкий темп: {secToMin(tempoEasy[0])}-{secToMin(tempoEasy[1])}/км
+                Легкий темп: {secToMin(easyTempoMax[0])}-{secToMin(easyTempoMin[1])}/км
                 <br />
-                Пороговый темп: {secToMin(tempoThreshold)}/км
+                Пороговый темп: {thresholdRun.tempoFast}-{thresholdRun.tempoSlow}/км
                 <br />
-                Интервальный темп: {secToMin(tempoInterval)}/км
+                Интервальный темп: {intervalRun.tempoFast}-{intervalRun.tempoSlow}/км
                 <br />
-                Повторный темп: {secToMin(tempoRepeat)}/км
+                Повторный темп: {repeatRun.tempoFast}-{repeatRun.tempoSlow}/км
             </div>
         </div> 
     );
