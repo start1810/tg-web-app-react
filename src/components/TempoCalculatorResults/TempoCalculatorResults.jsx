@@ -9,13 +9,6 @@ import "./TempoCalculatorResults.css";
 import countGeneralParameter from "../../scripts/tempoCalculator/countGeneralParameter.js";
 import countTempos from "../../scripts/tempoCalculator/countTempos.js";
 
-const recomendedTimes = {
-    easy: 90 * 60,
-    threshold: 60 * 60,
-    interval: 12 * 60,
-    repeat: 4 * 60,
-}
-
 const TempoCalculatorResult = () => {
     const location = useLocation();
     const records = location.state;
@@ -31,8 +24,6 @@ const TempoCalculatorResult = () => {
             </div>
         )
     }
-    
-    
 
     const thresholdRun = countTempos(records, 'threshold')
 
@@ -46,13 +37,8 @@ const TempoCalculatorResult = () => {
     const easyTempoMax = getTempo(maxLevel, 'easy');
     const easyTempoMin = getTempo(minLevel, 'easy');
 
-   
-    //console.log(nearestTimeEasy)
-    //console.log(nearestTimeThreshold)
-    //console.log(nearestTimeInterval)
-    //console.log(nearestTimeRepeat)
     return (
-        <div>
+        <div className={"app"}>
             <div>
                 <div className={"generalparameter"}>
                     <h1>{generalLevel}</h1>
