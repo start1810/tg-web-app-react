@@ -5,6 +5,9 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
   background: linear-gradient(blue, var(--tg-theme-bg-color));
   color: var(--tg-theme-text-color);
 }
