@@ -16,8 +16,8 @@ const StartPage = () => {
         <div className="page">
             <div className="photo1"></div>
             <div className="btn"
-                    onMouseOver={onChangeColorBlue}
-                    onMouseOut={onChangeColorTg}
+                    onMouseEnter={onChangeColorBlue}
+                    onMouseLeave={onChangeColorTg}
                     >
                 <Link to="/tempocalculatorform">
                     <Button 

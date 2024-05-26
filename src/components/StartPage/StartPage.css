@@ -4,7 +4,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--tg-theme-background-color);
+    background: var(--tg-theme-background-color);
 }
 
 .photo1 {
@@ -30,7 +30,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: var(--tg-theme-background-color);
+    background: var(--tg-theme-background-color);
     color: var(--tg-theme-text-color);
     
     border-top-style:dotted;

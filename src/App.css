@@ -10,6 +10,6 @@
 body {
   margin: 0;
   background: #262626;
-  color: #FEFEFE
+  color: var(--tg-theme-text-color);
 }
 
