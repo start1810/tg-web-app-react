@@ -4,26 +4,39 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background: url(../../img/background.heic);
-    background-size: contain;
+}
+
+.photo1 {
+    background: url(../../img/photo1.heic);
+    background-size:cover;
+    background-position: 30%;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 150vw;
-    
+    height: 30vw;
 }
 
 .btn {
-    padding-top: 15vw;
+    margin-top: 0;
 }
 
 .menubtn {
-    width: 80vw;
-    height: 15vh;
+    width: 100vw;
+    height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: #2247D5;
     color: #FEFEFE;
-    font-size: 6vw;
-    border-radius: 10px;
+    
+}
+
+p {
+    margin-top: 2vw;
+    text-align: left;
+}
+
+.symbolgo {
+    margin: 0;
+    padding: 0;
+    font-size: 20vw;
 }
