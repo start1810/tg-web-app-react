@@ -5,7 +5,7 @@ import "./StartPage.css"
 
 const StartPage = () => {
     return (
-        <div>
+        <div className="page">
             <div className="logo"></div>
             <div>
                 <Link to="/tempocalculatorform">

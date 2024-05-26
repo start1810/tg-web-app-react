@@ -3,10 +3,16 @@
     margin-left: auto;
     margin-right: auto;
     width: 100vw;
-    height: 30vh;
+    height: 100vw;
     background: url(../../img/runlogo.JPG);
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+.page {
+    background-color: #262626;
+    width: 100vw;
+    height: 100vh;
 }
 
 .menubtn {
@@ -17,5 +23,5 @@
     margin-right: auto;
     background-color: blue;
     color: var(--tg-theme-text-color);
-    font-size: 300%;
+    font-size: 6vw;
 }
