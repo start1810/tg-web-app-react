@@ -6,7 +6,6 @@ import "./StartPage.css"
 const StartPage = () => {
     return (
         <div className="page">
-            <div className="logo"></div>
             <div>
                 <Link to="/tempocalculatorform">
                     <Button className={"menubtn"}>Калькулятор темпов</Button>
