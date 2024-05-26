@@ -4,9 +4,12 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background-color: #262626;
+    background: url(../../img/background.heic);
+    background-size: contain;
+    background-repeat: no-repeat;
     width: 90vw;
-    height: 150vw;
+    height: 120vw;
+    
 }
 
 .menubtn {
