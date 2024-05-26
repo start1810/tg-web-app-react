@@ -1,0 +1,21 @@
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100vw;
+    height: 30vh;
+    background: url(../../img/runlogo.JPG);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.menubtn {
+    width: 80vw;
+    height: 20vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: blue;
+    color: var(--tg-theme-text-color);
+    font-size: 300%;
+}
