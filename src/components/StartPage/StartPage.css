@@ -7,18 +7,23 @@
     background: url(../../img/background.heic);
     background-size: contain;
     background-repeat: no-repeat;
-    width: 90vw;
-    height: 120vw;
+    width: 100vw;
+    height: 150vw;
     
+}
+
+.btn {
+    padding-top: 15vw;
 }
 
 .menubtn {
     width: 80vw;
-    height: 20vh;
+    height: 15vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
     background-color: #2247D5;
     color: #FEFEFE;
     font-size: 6vw;
+    border-radius: 10px;
 }
