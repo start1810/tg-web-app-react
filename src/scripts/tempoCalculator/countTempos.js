@@ -12,7 +12,6 @@ const countTempos = (records, type) => {
     }
     const nearestTime = findNearTime(records, recomendedTimes[type]);
     const level = getLevel(nearestTime)
-    console.log(nearestTime)
     const tempoFast = secToMin(getTempo(level, type));
     const tempoSlow = secToMin(getTempo(level-1, type));
     console.log([type, tempoFast, tempoSlow])

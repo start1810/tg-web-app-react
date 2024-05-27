@@ -8,11 +8,14 @@ import Button from "../Button/Button.jsx";
 import "./TempoCalculatorResults.css";
 import countGeneralParameter from "../../scripts/tempoCalculator/countGeneralParameter.js";
 import countTempos from "../../scripts/tempoCalculator/countTempos.js";
+import dataValidation from "../../scripts/tempoCalculator/dataValidation.js";
 
 const TempoCalculatorResult = () => {
     const location = useLocation();
     const records = location.state.records;
-    if (!(records.oneKm || records.threeKm || records.fiveKm || records.tenKm || records.semiMarathon)) {
+    const age = location.state.age;
+
+    if (!dataValidation(location.state)) {
         return (
             <div>
                 Введены неверные данные
@@ -30,7 +33,6 @@ const TempoCalculatorResult = () => {
     const intervalRun = countTempos(records, 'interval')
 
     const repeatRun = countTempos(records, 'repeat')
-    const age = records.age;
     const generalLevel = countGeneralParameter(thresholdRun.level, intervalRun.level, repeatRun.level, age)
     const maxLevel = Math.max(thresholdRun.level, intervalRun.level, repeatRun.level)
     const minLevel = Math.min(thresholdRun.level, intervalRun.level, repeatRun.level)

@@ -213,7 +213,7 @@ const TempoCalculatorForm = () => {
             </div>
             <div>
                 <Link to="/tempocalculatorresult" state={{
-                    age: age,
+                    age: +age,
                     records: {
                         oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
                         threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
