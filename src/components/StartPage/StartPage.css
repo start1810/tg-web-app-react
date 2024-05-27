@@ -10,10 +10,10 @@
 .photo1 {
     background: url(../../img/photo1.heic);
     background-size:cover;
-    background-position: 30%;
+    
     background-repeat: no-repeat;
     width: 100vw;
-    height: 40vw;
+    height: 50vw;
 }
 
 .btn {
