@@ -39,6 +39,7 @@ const StartPage = () => {
                         </table>
                     </Button>
                 </Link>
+                <div className="photo2"></div>
             </div>
             {/*
             <div>

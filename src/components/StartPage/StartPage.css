@@ -16,6 +16,15 @@
     height: 50vw;
 }
 
+.photo2 {
+    background: url(../../img/photo2.jpg);
+    background-size:cover;
+    
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 50vw;
+}
+
 .btn {
     margin-top: 0;
 }
