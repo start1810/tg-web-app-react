@@ -1,0 +1,45 @@
+.page {
+    display: block;
+    width: 50vh;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page>div {
+    margin-top: 5%;
+}
+
+.ageselector>h4 {
+    display: inline;
+}
+
+.ageselector>input {
+    width: 20%;
+    display: inline;
+    margin-left: 5%;
+    
+}
+
+.timeselector>div {
+    border-top-style:solid ;
+    border-width: 1px;  
+}
+
+.inputtime {
+    
+    width: 20%;
+    padding: 3%;
+    margin-left: 10%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    
+}
+
+.btnsubmitform {
+    margin-left: 30%;
+    width: 40%;
+    margin-right: 30%;
+    margin-bottom: 2%;
+}
+

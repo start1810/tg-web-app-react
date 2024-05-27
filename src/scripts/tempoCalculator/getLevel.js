@@ -1,5 +1,7 @@
 import { levels } from "./runPowerLevels.js";
 const maxLevel = 56;
+const minLevel = 1;
+
 
 const getLevel = (nearestTimeObj) => {
     const {distance, time} = nearestTimeObj;
@@ -12,6 +14,9 @@ const getLevel = (nearestTimeObj) => {
     }
     if (level === maxLevel) {
         level = maxLevel-1;
+    }
+    if (level < minLevel) {
+        level = minLevel;
     }
     /*
     console.log(levelsData);

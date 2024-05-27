@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import { useTelegram } from "../../hooks/useTelegram";
 import { Link } from "react-router-dom";
-import "./TempoCalculatorForm.css";
+import "./TempoCalculatorForm2.css";
 
 import Button from "../Button/Button";
 const isEmpty = (data) => {
@@ -76,143 +76,150 @@ const TempoCalculatorForm = () => {
 
 
     return (
-        <div className={"form"}>
-            <h4>Ваш возраст</h4>
-            <input 
-                className={'input'}
-                type="text"
-                placeholder={'сколько Вам лет'}
-                value={age}
-                onChange={onChangeAge}
-            />
-            <div>
-            <h4>Введите свои лучшие результаты на этих дистанциях за последние 6 недель</h4>
-            <div>
-            <h5>1 километр</h5>
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"} 
-                placeholder={'ММ'}
-                value={oneKmMin}
-                onChange={onChangeOneKmMin}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"}
-                placeholder={'СС'}
-                value={oneKmSec}
-                onChange={onChangeOneKmSec}
-            />
+        <div className="page">
+            <h3>Калькулятор темпов</h3>
+            <p>Введите свои лучшие результаты за последние 6 недель или примерное время, которое вы способны показать, а так же возраст для расчета зон интенсивности тренировок по темпу.</p>
+            <div className="ageselector">
+                <h4 >Ваш возраст:</h4>
+                <input 
+                    type="text"
+                    placeholder={'кол-во лет'}
+                    value={age}
+                    onChange={onChangeAge}
+                />
             </div>
+            <div className="timeselector">
+                <h4>Результаты:</h4>
+                <br></br>
+                <div>
+                    <h5>1 километр</h5>
+                    <div>
+                        <input 
+                            className={'inputtime'}
+                            type="number"
+                            max={"60"}
+                            min={"0"} 
+                            placeholder={'ММ'}
+                            value={oneKmMin}
+                            onChange={onChangeOneKmMin}
+                        />
+                        <input 
+                            className={'inputtime'}
+                            type="number"
+                            max={"60"}
+                            min={"0"}
+                            placeholder={'СС'}
+                            value={oneKmSec}
+                            onChange={onChangeOneKmSec}
+                        />
+                    </div>
+                </div>
+                <div className={""}>
+                <h5>3 километра</h5>
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"} 
+                    placeholder={'ММ'}
+                    value={threeKmMin}
+                    onChange={onChangeThreeKmMin}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"}
+                    placeholder={'СС'}
+                    value={threeKmSec}
+                    onChange={onChangeThreeKmSec}
+                />
+                </div>
+                <div className={""}>
+                <h5>5 километров</h5>
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"} 
+                    placeholder={'ММ'}
+                    value={fiveKmMin}
+                    onChange={onChangeFiveKmMin}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"}
+                    placeholder={'СС'}
+                    value={fiveKmSec}
+                    onChange={onChangeFiveKmSec}
+                />
+                </div>
+                <div className={""}>
+                <h5>10 километров</h5>
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"2"}
+                    min={"0"} 
+                    placeholder={'ЧЧ'}
+                    value={tenKmH}
+                    onChange={onChangeTenKmH}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"} 
+                    placeholder={'ММ'}
+                    value={tenKmMin}
+                    onChange={onChangeTenKmMin}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"}
+                    placeholder={'СС'}
+                    value={tenKmSec}
+                    onChange={onChangeTenKmSec}
+                />
+                </div>
+                <div className={""}>
+                <h5>Полумарафон</h5>
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"4"}
+                    min={"0"} 
+                    placeholder={'ЧЧ'}
+                    value={semiMarathonH}
+                    onChange={onChangeSemiMarathonH}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"} 
+                    placeholder={'ММ'}
+                    value={semiMarathonMin}
+                    onChange={onChangeSemiMarathonMin}
+                />
+                <input 
+                    className={'inputtime'}
+                    type="number"
+                    max={"60"}
+                    min={"0"}
+                    placeholder={'СС'}
+                    value={semiMarathonSec}
+                    onChange={onChangeSemiMarathonSec}
+                />
+                </div>
+                </div>
             <div>
-            <h5>3 километра</h5>
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"} 
-                placeholder={'ММ'}
-                value={threeKmMin}
-                onChange={onChangeThreeKmMin}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"}
-                placeholder={'СС'}
-                value={threeKmSec}
-                onChange={onChangeThreeKmSec}
-            />
-            </div>
-            <div>
-            <h5>5 километров</h5>
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"} 
-                placeholder={'ММ'}
-                value={fiveKmMin}
-                onChange={onChangeFiveKmMin}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"}
-                placeholder={'СС'}
-                value={fiveKmSec}
-                onChange={onChangeFiveKmSec}
-            />
-            </div>
-            <div>
-            <h5>10 километров</h5>
-            <input 
-                className={'input time'}
-                type="number"
-                max={"2"}
-                min={"0"} 
-                placeholder={'ЧЧ'}
-                value={tenKmH}
-                onChange={onChangeTenKmH}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"} 
-                placeholder={'ММ'}
-                value={tenKmMin}
-                onChange={onChangeTenKmMin}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"}
-                placeholder={'СС'}
-                value={tenKmSec}
-                onChange={onChangeTenKmSec}
-            />
-            </div>
-            <div>
-            <h5>Полумарафон</h5>
-            <input 
-                className={'input time'}
-                type="number"
-                max={"4"}
-                min={"0"} 
-                placeholder={'ЧЧ'}
-                value={semiMarathonH}
-                onChange={onChangeSemiMarathonH}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"} 
-                placeholder={'ММ'}
-                value={semiMarathonMin}
-                onChange={onChangeSemiMarathonMin}
-            />
-            <input 
-                className={'input time'}
-                type="number"
-                max={"60"}
-                min={"0"}
-                placeholder={'СС'}
-                value={semiMarathonSec}
-                onChange={onChangeSemiMarathonSec}
-            />
-            </div>
-            </div>
-            <div>
-                <Link to="/tempocalculatorresult" state={{
+                <Link to="/tempocalculatorresult" 
+                    state={{
                     age: +age,
                     records: {
                         oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
@@ -220,9 +227,10 @@ const TempoCalculatorForm = () => {
                         fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),
                         tenKm: +isEmpty(tenKmH) * 60 * 60 + +isEmpty(tenKmMin) * 60 + +isEmpty(tenKmSec),
                         semiMarathon: +isEmpty(semiMarathonH) * 60 * 60 + +isEmpty(semiMarathonMin) * 60 + +isEmpty(semiMarathonSec),
-                    }
-                }}>
-                    <Button>Отправить данные</Button>
+                        }
+                    }}
+                    >
+                    <Button className="btnsubmitform">Отправить данные</Button>
                 </Link>
             </div>
         </div>

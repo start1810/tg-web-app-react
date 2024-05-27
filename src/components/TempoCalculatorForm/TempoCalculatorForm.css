@@ -1,24 +1,58 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: 20px;
-    align-items: center;
+.page {
+    padding: auto;
+    display: block;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .input {
     width: 100%;
     padding: 10px;
-    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .time {
-    
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
     width: 20%;
-    margin: 15px;
+    margin-left: 8vw;
+    
 }
 
 .select {
     padding: 10px;
     margin-top: 15px;
 }
+
+.timeinput {
+    
+    border-bottom-style: solid;
+    border-width: 1px;
+    display: block;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    
+}
+
+.text {
+    text-align: left;
+    display: block;
+}
+.inputage {
+    width: 80%;
+    padding: 10px;
+    display: block;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.link {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
