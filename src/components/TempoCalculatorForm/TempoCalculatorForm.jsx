@@ -76,7 +76,7 @@ const TempoCalculatorForm = () => {
 
 
     return (
-        <div className="page">
+        <div className="pagetempocalculatorform">
             <h3>Калькулятор темпов</h3>
             <p>Введите свои лучшие результаты за последние 6 недель или примерное время, которое вы способны показать, а так же возраст для расчета зон интенсивности тренировок по темпу.</p>
             <div className="ageselector">
