@@ -58,7 +58,7 @@ p {
 }
 
 .colorTg {
-    color:white;
+    color: var(--tg-theme-text-color);
 }
 
 .symbolgo {

@@ -1,4 +1,5 @@
 const findNearTime = (records, checkedTime) => {
+    
     let distance = '';
     let nearestTime = 0;
     for (let prop in records) {

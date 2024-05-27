@@ -11,7 +11,7 @@ import countTempos from "../../scripts/tempoCalculator/countTempos.js";
 
 const TempoCalculatorResult = () => {
     const location = useLocation();
-    const records = location.state;
+    const records = location.state.records;
     if (!(records.oneKm || records.threeKm || records.fiveKm || records.tenKm || records.semiMarathon)) {
         return (
             <div>

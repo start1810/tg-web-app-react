@@ -214,11 +214,13 @@ const TempoCalculatorForm = () => {
             <div>
                 <Link to="/tempocalculatorresult" state={{
                     age: age,
-                    oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
-                    threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
-                    fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),
-                    tenKm: +isEmpty(tenKmH) * 60 * 60 + +isEmpty(tenKmMin) * 60 + +isEmpty(tenKmSec),
-                    semiMarathon: +isEmpty(semiMarathonH) * 60 * 60 + +isEmpty(semiMarathonMin) * 60 + +isEmpty(semiMarathonSec),
+                    records: {
+                        oneKm: +isEmpty(oneKmMin) * 60 + +isEmpty(oneKmSec),
+                        threeKm: +isEmpty(threeKmMin) * 60 + +isEmpty(threeKmSec),
+                        fiveKm: +isEmpty(fiveKmMin) * 60 + +isEmpty(fiveKmSec),
+                        tenKm: +isEmpty(tenKmH) * 60 * 60 + +isEmpty(tenKmMin) * 60 + +isEmpty(tenKmSec),
+                        semiMarathon: +isEmpty(semiMarathonH) * 60 * 60 + +isEmpty(semiMarathonMin) * 60 + +isEmpty(semiMarathonSec),
+                    }
                 }}>
                     <Button>Отправить данные</Button>
                 </Link>
