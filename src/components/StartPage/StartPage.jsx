@@ -18,6 +18,8 @@ const StartPage = () => {
             <div className="btn"
                     onMouseEnter={onChangeColorBlue}
                     onMouseLeave={onChangeColorTg}
+                    onTouchStart={onChangeColorBlue}
+                    onTouchEnd={onChangeColorTg}
                     >
                 <Link to="/tempocalculatorform">
                     <Button 

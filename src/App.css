@@ -9,7 +9,7 @@
 
 body {
   margin: 0;
-  background: #262626;
+  background: var(--tg-theme-background-color);;
   color: var(--tg-theme-text-color);
 }
 
