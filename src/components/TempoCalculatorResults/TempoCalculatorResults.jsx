@@ -66,30 +66,30 @@ const TempoCalculatorResult = () => {
             <div className={"tempodata"}>
                 Базовая зона: 
                 <br />
-                Рекомендуемый темп: {secToMin(easyTempoMax[0])}-{secToMin(easyTempoMin[1])}/км;
+                - рекомендуемый темп: {secToMin(easyTempoMax[0])}-{secToMin(easyTempoMin[1])}/км;
                 <br />
-                Рекомендуемый пульс:{HRRzones[0]}-{HRRzones[1]}уд/мин;
-                <br />
+                - рекомендуемый пульс:{HRRzones[0]}-{HRRzones[1]}уд/мин;
+                <br /> <br />
 
                 Пороговая зона:
                 <br />
-                Рекомендуемый темп: {thresholdRun.tempoFast}-{thresholdRun.tempoSlow}/км;
+                - рекомендуемый темп: {thresholdRun.tempoFast}-{thresholdRun.tempoSlow}/км;
                 <br />
-                Рекомендуемый пульс:{HRRzones[1]}-{HRRzones[2]}уд/мин;
-                <br />
+                - рекомендуемый пульс:{HRRzones[1]}-{HRRzones[2]}уд/мин;
+                <br /> <br />
 
                 Зона МПК:
                 <br />
-                Рекомендуемый темп: {intervalRun.tempoFast}-{intervalRun.tempoSlow}/км;
+                - рекомендуемый темп: {intervalRun.tempoFast}-{intervalRun.tempoSlow}/км;
                 <br />
-                Рекомендуемый пульс:{HRRzones[2]}-{HRRzones[3]}уд/мин;
-                <br />
+                - рекомендуемый пульс:{HRRzones[2]}-{HRRzones[3]}уд/мин;
+                <br /> <br />
 
                 Зона повторов:
                 <br />
-                Рекомендуемый темп: {repeatRun.tempoFast}-{repeatRun.tempoSlow}/км;
+                - рекомендуемый темп: {repeatRun.tempoFast}-{repeatRun.tempoSlow}/км;
                 <br />
-                Рекомендуемый пульс нет смысла отслеживать
+                - рекомендуемый пульс нет смысла отслеживать.
                 <br />
             </div>
         </div> 
