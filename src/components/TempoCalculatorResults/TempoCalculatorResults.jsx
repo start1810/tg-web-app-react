@@ -9,6 +9,7 @@ import "./TempoCalculatorResults.css";
 import countGeneralParameter from "../../scripts/tempoCalculator/countGeneralParameter.js";
 import countTempos from "../../scripts/tempoCalculator/countTempos.js";
 import dataValidation from "../../scripts/tempoCalculator/dataValidation.js";
+import countHRRzones from "../../scripts/tempoCalculator/countHRRzones.js";
 
 const TempoCalculatorResult = () => {
     const location = useLocation();
@@ -38,6 +39,7 @@ const TempoCalculatorResult = () => {
     const minLevel = Math.min(thresholdRun.level, intervalRun.level, repeatRun.level)
     const easyTempoMax = getTempo(maxLevel, 'easy');
     const easyTempoMin = getTempo(minLevel, 'easy');
+    const HRRzones = countHRRzones(age);
 
     return (
         <div className={"app"}>
@@ -62,13 +64,33 @@ const TempoCalculatorResult = () => {
                 </table>
             </div>
             <div className={"tempodata"}>
-                Легкий темп: {secToMin(easyTempoMax[0])}-{secToMin(easyTempoMin[1])}/км
+                Базовая зона: 
                 <br />
-                Пороговый темп: {thresholdRun.tempoFast}-{thresholdRun.tempoSlow}/км
+                Рекомендуемый темп: {secToMin(easyTempoMax[0])}-{secToMin(easyTempoMin[1])}/км;
                 <br />
-                Интервальный темп: {intervalRun.tempoFast}-{intervalRun.tempoSlow}/км
+                Рекомендуемый пульс:{HRRzones[0]}-{HRRzones[1]}уд/мин;
                 <br />
-                Повторный темп: {repeatRun.tempoFast}-{repeatRun.tempoSlow}/км
+
+                Пороговая зона:
+                <br />
+                Рекомендуемый темп: {thresholdRun.tempoFast}-{thresholdRun.tempoSlow}/км;
+                <br />
+                Рекомендуемый пульс:{HRRzones[1]}-{HRRzones[2]}уд/мин;
+                <br />
+
+                Зона МПК:
+                <br />
+                Рекомендуемый темп: {intervalRun.tempoFast}-{intervalRun.tempoSlow}/км;
+                <br />
+                Рекомендуемый пульс:{HRRzones[2]}-{HRRzones[3]}уд/мин;
+                <br />
+
+                Зона повторов:
+                <br />
+                Рекомендуемый темп: {repeatRun.tempoFast}-{repeatRun.tempoSlow}/км;
+                <br />
+                Рекомендуемый пульс нет смысла отслеживать
+                <br />
             </div>
         </div> 
     );
