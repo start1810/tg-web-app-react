@@ -4,7 +4,7 @@ const dataValidation = (data) => {
     const {oneKm, threeKm, fiveKm, tenKm, semiMarathon} = records;
     //console.log(data)
 
-    if (!oneKm && !threeKm && !fiveKm && !tenKm && !semiMarathon) {
+    if (!oneKm && !threeKm && !fiveKm && !tenKm && !semiMarathon && !age) {
         result = false;
     }
     return result;
