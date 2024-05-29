@@ -1,6 +1,6 @@
 .runlevels {
     text-align: center;
-    background: linear-gradient(blue, blue, var(--tg-theme-bg-color));
+    background: linear-gradient(#2247D5, #2247D5, var(--tg-theme-bg-color));
 }
 
 td {
