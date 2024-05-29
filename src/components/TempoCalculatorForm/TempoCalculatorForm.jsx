@@ -83,7 +83,7 @@ const TempoCalculatorForm = () => {
                 <h4 >Ваш возраст:</h4>
                 <input 
                     type="text"
-                    placeholder={'кол-во лет'}
+                    placeholder={'лет'}
                     value={age}
                     onChange={onChangeAge}
                 />
