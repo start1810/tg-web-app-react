@@ -27,3 +27,17 @@ td {
     width: 90%;
     padding-bottom: 5%;
 }
+
+.borderTg {
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-color: var(--tg-theme-text-color);
+    border-width: 1px;
+}
+
+.borderActive {
+    border-top-style: dotted;
+    border-bottom-style: dotted;
+    border-color: #2247D5;
+    border-width: 1px;
+}
