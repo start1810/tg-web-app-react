@@ -1,5 +1,8 @@
 const countHRRzones = ( age ) => {
-    const checkedAge = age < 90? age : 90;
+    let checkedAge = age < 90? age : 90;
+    if (checkedAge === 0) {
+        checkedAge = 33;
+    }
     const maxHRR = 220 - checkedAge;
     const recoveryHRR = Math.round(0.65 * maxHRR);
     const aerobicHRR = Math.round(0.8 * maxHRR);
