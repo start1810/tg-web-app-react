@@ -49,21 +49,18 @@
 }
 
 .link {
+    border-radius: 30px;
+    border-style: dotted;
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
 
 .btnsubmitform {
-    padding: 10px 15px;
-    background: var(--tg-theme-button-color);
-    color: var(--tg-text-button-color);
-    border-radius: 30px;
-    text-align: center;
-    border: none;
-    outline: none;
-    cursor: pointer;
+    background-color: aqua;
 }
+
+
 
 
 

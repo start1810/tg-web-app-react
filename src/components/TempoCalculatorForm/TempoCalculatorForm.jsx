@@ -230,7 +230,7 @@ const TempoCalculatorForm = () => {
                         }
                     }}
                     >
-                    <button className="btnsubmitform">Отправить данные</button>
+                    <Button className="btnsubmitform">Отправить данные</Button>
                 </Link>
             </div>
         </div>
