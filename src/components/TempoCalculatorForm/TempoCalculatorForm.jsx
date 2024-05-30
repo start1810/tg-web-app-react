@@ -99,7 +99,7 @@ const TempoCalculatorForm = () => {
                             type="number"
                             max={"60"}
                             min={"0"} 
-                            placeholder={'ММ'}
+                            placeholder={'мин'}
                             value={oneKmMin}
                             onChange={onChangeOneKmMin}
                         />
@@ -108,7 +108,7 @@ const TempoCalculatorForm = () => {
                             type="number"
                             max={"60"}
                             min={"0"}
-                            placeholder={'СС'}
+                            placeholder={'сек'}
                             value={oneKmSec}
                             onChange={onChangeOneKmSec}
                         />
@@ -121,7 +121,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"} 
-                    placeholder={'ММ'}
+                    placeholder={'мин'}
                     value={threeKmMin}
                     onChange={onChangeThreeKmMin}
                 />
@@ -130,7 +130,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"}
-                    placeholder={'СС'}
+                    placeholder={'сек'}
                     value={threeKmSec}
                     onChange={onChangeThreeKmSec}
                 />
@@ -142,7 +142,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"} 
-                    placeholder={'ММ'}
+                    placeholder={'мин'}
                     value={fiveKmMin}
                     onChange={onChangeFiveKmMin}
                 />
@@ -151,7 +151,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"}
-                    placeholder={'СС'}
+                    placeholder={'сек'}
                     value={fiveKmSec}
                     onChange={onChangeFiveKmSec}
                 />
@@ -163,7 +163,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"2"}
                     min={"0"} 
-                    placeholder={'ЧЧ'}
+                    placeholder={'час'}
                     value={tenKmH}
                     onChange={onChangeTenKmH}
                 />
@@ -172,7 +172,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"} 
-                    placeholder={'ММ'}
+                    placeholder={'мин'}
                     value={tenKmMin}
                     onChange={onChangeTenKmMin}
                 />
@@ -181,7 +181,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"}
-                    placeholder={'СС'}
+                    placeholder={'сек'}
                     value={tenKmSec}
                     onChange={onChangeTenKmSec}
                 />
@@ -193,7 +193,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"4"}
                     min={"0"} 
-                    placeholder={'ЧЧ'}
+                    placeholder={'час'}
                     value={semiMarathonH}
                     onChange={onChangeSemiMarathonH}
                 />
@@ -202,7 +202,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"} 
-                    placeholder={'ММ'}
+                    placeholder={'мин'}
                     value={semiMarathonMin}
                     onChange={onChangeSemiMarathonMin}
                 />
@@ -211,7 +211,7 @@ const TempoCalculatorForm = () => {
                     type="number"
                     max={"60"}
                     min={"0"}
-                    placeholder={'СС'}
+                    placeholder={'сек'}
                     value={semiMarathonSec}
                     onChange={onChangeSemiMarathonSec}
                 />

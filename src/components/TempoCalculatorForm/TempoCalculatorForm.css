@@ -54,5 +54,9 @@
     margin-right: auto;
 }
 
+.btnsubmitform {
+    background-color: var(--tg-theme-button-color);
+}
+
 
 
