@@ -24,7 +24,6 @@ const StartPage = () => {
                 <Link to="/tempocalculatorform">
                     <Button 
                         className={`menubtn ${color}`} 
-                        
                         >
                         <table className="btntable">
                             <tr>
@@ -39,10 +38,16 @@ const StartPage = () => {
                         </table>
                     </Button>
                 </Link>
+            </div>
+            <div className="btn"
+                    onMouseEnter={onChangeColorBlue}
+                    onMouseLeave={onChangeColorTg}
+                    onTouchStart={onChangeColorBlue}
+                    onTouchEnd={onChangeColorTg}
+            >
                 <Link to="/sneakerssizeform">
                     <Button 
                         className={`menubtn ${color}`} 
-                        
                         >
                         <table className="btntable">
                             <tr>
@@ -57,8 +62,8 @@ const StartPage = () => {
                         </table>
                     </Button>
                 </Link>
-                <div className="photo2"></div>
             </div>
+            <div className="photo2"></div>
             {/*
             <div>
                 <Link to="/runnerprogram">
