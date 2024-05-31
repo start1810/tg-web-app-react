@@ -48,6 +48,7 @@ const StartPage = () => {
                     </Button>
                 </Link>
             </div>
+
             <div className="btn"
                     onMouseEnter={onChangeColorBlue2}
                     onMouseLeave={onChangeColorTg2}
