@@ -10,6 +10,7 @@ import ProgramList from './components/ProgramList/ProgramList';
 import StartPage from './components/StartPage/StartPage';
 import TempoCalculatorForm from './components/TempoCalculatorForm/TempoCalculatorForm';
 import TempoCalculatorResult from './components/TempoCalculatorResults/TempoCalculatorResults';
+import SneakersSize from './components/SneakersSize/SneakersSize';
 
 function App() {
   const {tg, onToggleButton} = useTelegram();
@@ -27,6 +28,7 @@ function App() {
         <Route path={'runnerprogram'} element={<ProgramList />}/>
         <Route path={'tempocalculatorform'} element={<TempoCalculatorForm />}/>
         <Route path={'tempocalculatorresult'} element={<TempoCalculatorResult />}/>
+        <Route path={'sneakerssizeform'} element={<SneakersSize />}/>
         
       </Routes>
     </div>

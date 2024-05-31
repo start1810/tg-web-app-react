@@ -39,6 +39,24 @@ const StartPage = () => {
                         </table>
                     </Button>
                 </Link>
+                <Link to="/sneakerssizeform">
+                    <Button 
+                        className={`menubtn ${color}`} 
+                        
+                        >
+                        <table className="btntable">
+                            <tr>
+                                <td>
+                                <h1>Размер обуви</h1>
+                                <p>Подберите оптимальные темпы и пульс тренировок, чтобы сделать тренировки продуктивнее</p>
+                                </td>
+                                <td className="symbolgo">
+                                    {'>'}
+                                </td>
+                            </tr>
+                        </table>
+                    </Button>
+                </Link>
                 <div className="photo2"></div>
             </div>
             {/*
