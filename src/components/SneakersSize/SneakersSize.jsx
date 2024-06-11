@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { nikeSize, standartSize, newBalanceSize, adidasSize, asicsSize } from "./scripts/sneakersSizeData.js";
+import finderSize from "./scripts/finderSize.js";
 
 const SneakersSize = () => {
   const [cmSize, setCmSize] = useState();
@@ -18,10 +19,18 @@ const SneakersSize = () => {
     document.querySelector('#rusize').selectedIndex = select.selectedIndex;
     document.querySelector('#ussize').selectedIndex = select.selectedIndex;
     document.querySelector('#uksize').selectedIndex = select.selectedIndex;
-    setNikeSizes(nikeSize[gender][select.selectedIndex]);
-    setNewBalanceSizes(newBalanceSize[gender][select.selectedIndex]);
-    setAdidasSizes(adidasSize[gender][select.selectedIndex]);
-    setAsicsSizes(asicsSize[gender][select.selectedIndex]);
+
+    const nikeIndex = finderSize(select.value, 'cm', nikeSize[gender])
+    setNikeSizes(nikeSize[gender][nikeIndex]);
+
+    const newBalanceIndex = finderSize(select.value, 'cm', newBalanceSize[gender])
+    setNewBalanceSizes(newBalanceSize[gender][newBalanceIndex]);
+
+    const adidasIndex = finderSize(select.value, 'cm', adidasSize[gender])
+    setAdidasSizes(adidasSize[gender][adidasIndex]);
+
+    const asicsIndex = finderSize(select.value, 'cm', asicsSize[gender])
+    setAsicsSizes(asicsSize[gender][asicsIndex]);
   }
 
   const onChangeRuSize = (e) => {
@@ -30,10 +39,17 @@ const SneakersSize = () => {
     document.querySelector('#cmsize').selectedIndex = select.selectedIndex;
     document.querySelector('#ussize').selectedIndex = select.selectedIndex;
     document.querySelector('#uksize').selectedIndex = select.selectedIndex;
-    setNikeSizes(nikeSize[gender][select.selectedIndex]);
-    setNewBalanceSizes(newBalanceSize[gender][select.selectedIndex]);
-    setAdidasSizes(adidasSize[gender][select.selectedIndex]);
-    setAsicsSizes(asicsSize[gender][select.selectedIndex]);
+    const nikeIndex = finderSize(select.value, 'ru', nikeSize[gender])
+    setNikeSizes(nikeSize[gender][nikeIndex]);
+
+    const newBalanceIndex = finderSize(select.value, 'ru', newBalanceSize[gender])
+    setNewBalanceSizes(newBalanceSize[gender][newBalanceIndex]);
+
+    const adidasIndex = finderSize(select.value, 'ru', adidasSize[gender])
+    setAdidasSizes(adidasSize[gender][adidasIndex]);
+
+    const asicsIndex = finderSize(select.value, 'ru', asicsSize[gender])
+    setAsicsSizes(asicsSize[gender][asicsIndex]);
   }
 
   const onChangeUsSize = (e) => {
@@ -42,10 +58,17 @@ const SneakersSize = () => {
     document.querySelector('#rusize').selectedIndex = select.selectedIndex;
     document.querySelector('#cmsize').selectedIndex = select.selectedIndex;
     document.querySelector('#uksize').selectedIndex = select.selectedIndex;
-    setNikeSizes(nikeSize[gender][select.selectedIndex]);
-    setNewBalanceSizes(newBalanceSize[gender][select.selectedIndex]);
-    setAdidasSizes(adidasSize[gender][select.selectedIndex]);
-    setAsicsSizes(asicsSize[gender][select.selectedIndex]);
+    const nikeIndex = finderSize(select.value, 'us', nikeSize[gender])
+    setNikeSizes(nikeSize[gender][nikeIndex]);
+
+    const newBalanceIndex = finderSize(select.value, 'us', newBalanceSize[gender])
+    setNewBalanceSizes(newBalanceSize[gender][newBalanceIndex]);
+
+    const adidasIndex = finderSize(select.value, 'us', adidasSize[gender])
+    setAdidasSizes(adidasSize[gender][adidasIndex]);
+
+    const asicsIndex = finderSize(select.value, 'us', asicsSize[gender])
+    setAsicsSizes(asicsSize[gender][asicsIndex]);
   }
 
   const onChangeUkSize = (e) => {
@@ -54,10 +77,17 @@ const SneakersSize = () => {
     document.querySelector('#rusize').selectedIndex = select.selectedIndex;
     document.querySelector('#ussize').selectedIndex = select.selectedIndex;
     document.querySelector('#cmsize').selectedIndex = select.selectedIndex;
-    setNikeSizes(nikeSize[gender][select.selectedIndex]);
-    setNewBalanceSizes(newBalanceSize[gender][select.selectedIndex]);
-    setAdidasSizes(adidasSize[gender][select.selectedIndex]);
-    setAsicsSizes(asicsSize[gender][select.selectedIndex]);
+    const nikeIndex = finderSize(select.value, 'uk', nikeSize[gender])
+    setNikeSizes(nikeSize[gender][nikeIndex]);
+
+    const newBalanceIndex = finderSize(select.value, 'uk', newBalanceSize[gender])
+    setNewBalanceSizes(newBalanceSize[gender][newBalanceIndex]);
+
+    const adidasIndex = finderSize(select.value, 'uk', adidasSize[gender])
+    setAdidasSizes(adidasSize[gender][adidasIndex]);
+
+    const asicsIndex = finderSize(select.value, 'uk', asicsSize[gender])
+    setAsicsSizes(asicsSize[gender][asicsIndex]);
   }
 
   const onChangeGender = (e) => {
